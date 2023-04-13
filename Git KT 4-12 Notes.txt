@@ -1,0 +1,163 @@
+Git KT
+
+*Git History and review - to check the commits and make changes if necessary
+*Git Commits - should be related to the tickets
+*Local and Repo Synchro - push pull etc.
+*Git Diff - if there is merge conflict, you will choose which one to merge
+
+
+** Add repo from origin(?)
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102
+$ git inti
+git: 'inti' is not a git command. See 'git --help'.
+
+ 
+
+The most similar command is
+        init
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102
+$ git init
+Initialized empty Git repository in C:/03Repository/git102/.git/
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git remote add origin git@github.com:bryankimartificio/git102.git
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git status
+On branch master
+
+ 
+
+No commits yet
+
+ 
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git remote -v
+origin  git@github.com:bryankimartificio/git102.git (fetch)
+origin  git@github.com:bryankimartificio/git102.git (push)
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ touch test.txt
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ ls
+test.txt
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git status
+On branch master
+
+ 
+
+No commits yet
+
+ 
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+ 
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git add test.txt
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git status
+On branch master
+
+ 
+
+No commits yet
+
+ 
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test.txt
+
+ 
+
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git commit -m "feat(ESS001): initialized git"
+[master (root-commit) d6ae515] feat(ESS001): initialized git
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 test.txt
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git log
+commit d6ae51522834eab3d0d091e99a572eef5a6a2f24 (HEAD -> master)
+Author: Bryan Kim ARTIFICIO <bryankim.artificio@essilor.com>
+Date:   Wed Apr 12 12:13:10 2023 +0800
+
+ 
+
+    feat(ESS001): initialized git
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git log --oneline
+d6ae515 (HEAD -> master) feat(ESS001): initialized git
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+ 
+
+    git push --set-upstream origin master
+
+ 
+
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 246 bytes | 246.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:bryankimartificio/git102.git
+* [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+ 
+
+bryankim.artificio@PHL3SP8RG3 MINGW64 /c/03Repository/git102 (master)
